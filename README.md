@@ -1,16 +1,16 @@
-# Flippify - Flip Item Tracker & Analytics
+# Fingerprint Attendance System
 
-Flippify is a desktop app to help you track buying and selling of items, monitor profits, view analytics, and manage your inventory of unsold items.
+Fingerprint Attendance System is a desktop app to help you track student attendance using fingerprint scanning with Arduino and R307 sensor.
 
 ---
 
 ## Features
 
-- Track items you bought and sold with prices and dates.
-- View profit and expense summaries.
-- Explore analytics with charts showing sales trends.
-- Manage your inventory of unsold items.
-- Import item data from Excel files for easy bulk entry.
+- Track student attendance with fingerprint scanning and timestamps.
+- Enroll students with names, IDs, and profile pictures.
+- View attendance records with filtering and export capabilities.
+- Real-time fingerprint detection with visual feedback.
+- Modern dark-themed interface with easy navigation.
 
 ---
 
@@ -20,10 +20,7 @@ Flippify is a desktop app to help you track buying and selling of items, monitor
 
 - Python 3.8+
 - Tkinter (usually included with Python)
-- `matplotlib` for analytics charts (`pip install matplotlib`)
 - `sv_ttk` for modern theming (`pip install sv_ttk`)
-- `openpyxl` for Excel file handling (if import is implemented) (`pip install openpyxl`)
-
 ---
 
 ### Running the App
@@ -33,3 +30,13 @@ Flippify is a desktop app to help you track buying and selling of items, monitor
 3. Run the main script:
    ```bash
    python main.py
+   
+## Troubleshooting
+### Configuration
+Arduino COM Port
+The default COM port is set to COM3. To change it:
+
+Open arduino/arduino_comm.py
+Modify the default port in the 
+   ```bash __init__ method:
+pythondef __init__(self, port: str = "YOUR_PORT", baudrate: int = 9600):
