@@ -5,7 +5,7 @@ from typing import Callable, Optional
 
 
 class ArduinoComm:
-    def __init__(self, port: str = "COM4", baudrate: int = 9600):  # Changed from COM3 to COM4
+    def __init__(self, port: str = "COM4", baudrate: int = 9600):
         self.port = port
         self.baudrate = baudrate
         self.serial_conn: Optional[serial.Serial] = None
